@@ -9,6 +9,10 @@ def index():
 def extra():
     return '<h1>Extra Page<h2>'
 
+@app.route("/user/<username>")
+def user(username):
+    return f"Hi {username}"
+
 
 if __name__ == '__main__':
     app.run()
