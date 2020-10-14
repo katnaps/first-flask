@@ -19,15 +19,31 @@
     }
 
     img {
-        width: 35%;
+        width: 30%;
     }
 
+    button {
+        margin: 20px;
+    }
 </style>
+
 <body>
+    {% if signed_in %}
     <div id="container">
         <h1>Well hello there...{{name}}!</h1>
+        <button>Sign Out</button>
         <img src="../static/hello.jpg" />
     </div>
+    {% else %}
+    <h1>Hello Stranger!</h1>
+    <button>Sign In</button>
+    <button>Sign Up</button>
+    {% endif %}
+
+    <!-- <div id="container">
+        <h1>Well hello there...{{name}}!</h1>
+        <img src="../static/hello.jpg" />
+    </div> -->
 </body>
 
 </html>
