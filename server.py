@@ -6,6 +6,10 @@ def index():
     signed_in = True
     return render_template('index.html', signed_in=signed_in)
 
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
+
 # @app.route("/<name>")
 # def index(name):
 #     name = name.upper()

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Hello there...</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    {% if signed_in %}
+
+        <h1>Well hello there...{{name}}!</h1>
+        <button>Sign Out</button>
+    
+    {% else %}
+        <h1>Hello Stranger!</h1>
+        <button>Sign In</button>
+        <button>Sign Up</button>
+    {% endif %}
+        <div id="container">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+</body>
+
+</html>

@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends "main.html" %}
+{% block content %}
 
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Hello there...</title>
-</head>
-<style>
-   
-</style>
+<h1>Homepage</h1>
+<img src="../static/doggo.jpg" />
 
-<body>
-    {% if signed_in %}
-    <div id="container">
-        <h1>Well hello there...{{name}}!</h1>
-        <button>Sign Out</button>
-        <img src="../static/doggo.jpg" />
-    </div>
-    {% else %}
-    <h1>Hello Stranger!</h1>
-    <button>Sign In</button>
-    <button>Sign Up</button>
-    {% endif %}
-
-    <!-- <div id="container">
-        <h1>Well hello there...{{name}}!</h1>
-        <img src="../static/hello.jpg" />
-    </div> -->
-</body>
-
-</html>
+{% endblock %}
