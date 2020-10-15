@@ -1,8 +1,10 @@
 {% extends "main.html" %}
 {% block content %}
-
+{% if first_name %}
+  <p>Thanks for contacting us, {{first_name}}</p>
+  <img src="../static/doggo.jpg" />
+{% endif %}
 <h1>Homepage</h1>
 <a href="{{url_for('contact')}}">Contact Us</a>
-<img src="../static/doggo.jpg" />
 
 {% endblock %}
